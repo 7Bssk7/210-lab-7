@@ -6,7 +6,7 @@ using namespace std;
 
 const int SIZE = 5;
 
-string* reverseArray();
+void reverseArray(string *arr);
 void displayArray(string *arr);
 
 int main(){
@@ -14,8 +14,21 @@ int main(){
     listArr = new string[SIZE]{"Janet", "Jeffe", "Jin", "Joe", "Junio"};
     cout << "Original array: ";
     displayArray(listArr); 
+    reverseArray(listArr);
+    cout << "Reversed array: ";
+    displayArray(listArr);
+    delete [] listArr;
 
     return 0;
+}
+
+void reverseArray(string *arr){
+    string temp;
+    for(int i = 0; i < (SIZE/2); ++i){
+        temp = *(arr + i);
+        *(arr + i) = *(arr + (SIZE-1) - i);
+        *(arr + (SIZE-1) - i) = temp;
+    }
 }
 
 void displayArray(string *arr){
