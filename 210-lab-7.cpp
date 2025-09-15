@@ -22,6 +22,9 @@ int main(){
     return 0;
 }
 
+//This function receives a dynamic string array, reverses the elements, and returns a pointer to the modified array.
+//arguments: a dynamic string array.
+//return: a dynamic string array with all of its elements reversed.
 string* reverseArray(string *arr){
     string temp;
 
@@ -34,6 +37,9 @@ string* reverseArray(string *arr){
     return arr;
 }
 
+//This function receives a dynamic string array, and outputs its elements.
+//arguments: a dynamic string array.
+//return: no return, it's a void function. Just outputs all elements of the dynamic string array.
 void displayArray(string *arr){
     for(int i = 0; i < SIZE; ++i){
         cout << *(arr + i) << " ";
