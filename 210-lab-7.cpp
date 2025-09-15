@@ -27,7 +27,6 @@ int main(){
 //return: a dynamic string array with all of its elements reversed.
 string* reverseArray(string *arr){
     string temp;
-
     for(int i = 0; i < (SIZE/2); ++i){
         temp = *(arr + i);
         *(arr + i) = *(arr + (SIZE-1) - i);
